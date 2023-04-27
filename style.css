@@ -1,6 +1,238 @@
 * {
-    background: #eee;
-    font-family: 'Anuphan', sans-serif;
+    /* font-family: 'Anuphan', sans-serif;
     font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif; */
     font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #eee;
+}
+
+.texto {
+    position: absolute;
+    width: 42%;
+    height: 60%;
+    left: 12%;
+    top: 15%;
+    border: none;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    background-color: #eee;
+}
+
+.texto::placeholder {
+    color: #0a3871;
+    font-weight: bold;
+}
+
+.texto:focus,
+.texto:active {
+    border: none;
+    outline: none;
+}
+
+.terminos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    position: absolute;
+    width: 80%;
+    left: 12%;
+    top: 80%;
+}
+
+.terminos p {
+    font-size: 12px;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 150%;
+    color: #495057;
+    opacity: 0.8;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.terminos p:hover {
+    color: rgb(116, 40, 40);
+    font-weight: bold;
+}
+
+.logo-e {
+    width: 10px;
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 1% 0;
+    position: absolute;
+    width: 80%;
+    left: 12%;
+    top: 82%;
+}
+
+.btn-encriptar {
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    gap: 8px;
+    width: 25%;
+    background-color: #0a3871;
+    border-radius: 10px;
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+    color: #eee;
+}
+
+.btn-desencriptar {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2%;
+    gap: 8%;
+    width: 25%;
+    background: #d8dfe8;
+    border-radius: 10px;
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+}
+
+.btn-desencriptar:hover,
+.btn-encriptar:hover {
+    margin: 0.3%;
+    width: 22.2%;
+    padding: 1.8%;
+}
+
+.resultado {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 30%;
+    height: 90%;
+    left: 60%;
+    top: 5%;
+    background: white;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 30px;
+}
+
+.mensaje-cifrado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    gap: 15px;
+    position: absolute;
+    width: 100%;
+    top: 65%;
+    text-align: center;
+
+}
+
+.mensaje-cifrado h2 {
+    width: 60%;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: #495057;
+}
+
+.mensaje-cifrado p {
+    width: 80%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #495057;
+}
+
+.resultado .munheco {
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    top: 15%;
+}
+
+/* Diseño responsivo */
+
+@media (max-width: 57.5em) {
+
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .cifrado {
+        width: 100%;
+    }
+
+    .texto {
+        width: 80%;
+        height: 60%;
+        left: 10%;
+        top: 5%;
+    }
+
+    .terminos {
+        width: 80%;
+        left: 10%;
+        top: 65%;
+    }
+    
+    .terminos p {
+        font-size: 12px;
+    }
+
+    .botones {
+        width: 80%;
+        left: 10%;
+        top: 70%;
+    }
+
+    .btn-encriptar, .btn-desencriptar {
+        width: 48%;
+        border-radius: 10px;
+    }
+
+    .btn-encriptar:hover, .btn-desencriptar:hover {
+        margin: 0.3%;
+        width: 47.5%;
+        padding: 1.8%;
+    }
+
+    .resultado {
+        width: 80%;
+        height: 15%;
+        left: 10%;
+        top: 80%;
+    }
+
+    .mensaje-cifrado {
+        width: 100%;
+        top: 5%;
+    }
+
+    .munheco {
+        top: 0;
+        display: none;
+        visibility: hidden;
+    }
 }
