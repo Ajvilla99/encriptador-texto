@@ -29,7 +29,7 @@
 
         tituloMensaje.textContent = "Ningún Mensaje fue encontrado"
         parrafo.textContent = "Ingresa el texto que desea encriptar o desencriptar"
-        alert("Debes ingresar algún texto")
+        swal("Ooops!", "Debes ingresar algún texto", "warning")
     }
   }
 
@@ -53,6 +53,6 @@
     } else {
       tituloMensaje.textContent = "Ningún Mensaje fue encontrado"
       parrafo.textContent = "Ingresa el texto que desea encriptar o desencriptar"
-      alert("Debes ingresar algún texto")
+      swal("Ooops!", "Debes ingresar algún texto", "warning")
     }
   }
