@@ -8,6 +8,9 @@
 //     return texto.replace(/enter/g, "e").replace(/imes/g, "i").replace(/ai/g, "a").replace(/ober/g, "o").replace(/ufat/g, "u");
 //   }
 
+
+
+// Esta funcion encriptara el texto ingresado y mostrara el texto encriptado
   function encriptar() {
 
     let texto = document.getElementById("texto").value;
@@ -29,9 +32,12 @@
 
         tituloMensaje.textContent = "Ningún Mensaje fue encontrado"
         parrafo.textContent = "Ingresa el texto que desea encriptar o desencriptar"
+        //swal es el alert personalizado
         swal("Ooops!", "Debes ingresar algún texto", "warning")
     }
   }
+
+// Esta funcion desencriptara el texto que fue encriptado y mostrara en pantalla
 
   function desencriptar() {
 
@@ -53,6 +59,7 @@
     } else {
       tituloMensaje.textContent = "Ningún Mensaje fue encontrado"
       parrafo.textContent = "Ingresa el texto que desea encriptar o desencriptar"
+      //swal es el alert personalizado
       swal("Ooops!", "Debes ingresar algún texto", "warning")
     }
   }
